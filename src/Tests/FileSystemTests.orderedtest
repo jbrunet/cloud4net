@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="filesystemtests-vs10" storage="c:\dev\cloud4net\trunk\src\tests\filesystemtests-vs10.orderedtest" id="b7fa6fb5-ae73-48db-8f12-11a1f9c85679" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Execution timeOut="2147483647" />
+  <TestCategory>
+    <TestCategoryItem TestCategory="FileSystem" />
+    <TestCategoryItem TestCategory="Ordered" />
+  </TestCategory>
+  <TestLinks>
+    <TestLink id="7fa90083-9e8e-9e00-3167-d057c36f31a8" name="FileSystemTest00_ContainerList" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="90fd5988-f905-422d-c19e-ea223c1ea390" name="FileSystemTest01_CreateContainerIfNotExists" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="d83ca9c4-529e-222d-f732-8b4a78951b10" name="FileSystemTest02_CreateContainerIfNotExist2" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="d1bcd9b4-acd6-5a6d-12ef-850b9646f25f" name="FileSystemTest03_ContainerExists" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="92aa812c-a3bf-e8bd-df40-8c76ea759431" name="FileSystemTest04_CreateContainer" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="9fc2e2ae-16d8-b591-16c2-a68694682544" name="FileSystemTest05_DeleteContainerIfExists" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="329b2021-35d4-8470-1509-7d102bc4c93c" name="FileSystemTest06_DeleteContainer" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="e67620c2-c818-3873-7717-b6cae2781842" name="FileSystemTest07_ContainerDoesNotExists" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="99308d13-0e3e-619e-4d2a-b0089d38adb2" name="FileSystemTest08_DeleteContainerIfExists2" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

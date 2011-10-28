@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="azuretests-vs10" storage="c:\dev\cloud4net\trunk\src\tests\azuretests-vs10.orderedtest" id="f847f3ce-f950-4ef0-a435-37896ed35c40" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Css projectStructure="vstfs:///Classification/Node/2c1b5be5-6094-4886-8e8c-1bde88f15755" />
+  <Execution timeOut="2147483647" />
+  <TestCategory>
+    <TestCategoryItem TestCategory="Azure" />
+    <TestCategoryItem TestCategory="Ordered" />
+  </TestCategory>
+  <TestLinks>
+    <TestLink id="d2d8c6d3-5b5f-9428-e003-6a53267f9784" name="AzureTest00_ContainerList" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="7a983500-18af-72b9-7e34-96ec9ffc7046" name="AzureTest01_CreateContainerIfNotExists" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b84210d2-e81a-57a2-aaea-581196cc0e4a" name="AzureTest02_CreateContainerIfNotExist2" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="28c54e2c-f6f3-8e8b-a481-e0139c8f0e01" name="AzureTest03_ContainerExists" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="e3430352-7b9d-7dae-c2ca-8f695b982d8c" name="AzureTest04_CreateContainer" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="8be53c9e-8425-c563-07aa-87f4e3d72d61" name="AzureTest05_DeleteContainerIfExists" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b062b9d6-8840-f0a5-2b86-f0d63870a419" name="AzureTest06_DeleteContainer" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="91d7c3e8-3f16-3f42-8515-59ce7a9b7cab" name="AzureTest07_ContainerDoesNotExists" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="67c94689-de77-063b-4fcb-14c5fde2eebf" name="AzureTest08_DeleteContainerIfExists2" storage="..\..\bin\.net 3.5\debug\cloud4net.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
