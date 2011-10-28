@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="WADLogs" Class="WADLogsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=WADLogs;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.WADWindowsEventLogs" Member="WADWindowsEventLogs">
+    <Type Name="WADWindowsEventLog">
+      <Column Name="PartitionKey" Type="System.String" DbType="VarChar(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RowKey" Type="System.String" DbType="VarChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventTickCount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DeploymentId" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleInstance" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderName" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="EventId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Pid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Channel" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="RawXml" Type="System.Xml.Linq.XElement" DbType="Xml NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WADLogs" Member="WADLogs">
+    <Type Name="WADLog">
+      <Column Name="PartitionKey" Type="System.String" DbType="VarChar(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RowKey" Type="System.String" DbType="VarChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventTickCount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DeploymentId" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleInstance" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EventId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Pid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WADDiagnosticInfrastructureLogs" Member="WADDiagnosticInfrastructureLogs">
+    <Type Name="WADDiagnosticInfrastructureLog">
+      <Column Name="PartitionKey" Type="System.String" DbType="VarChar(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RowKey" Type="System.String" DbType="VarChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventTickCount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DeploymentId" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleInstance" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Pid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Function]" Member="Function" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Line" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MDRESULT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ErrorCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ErrorCodeMsg" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WADDirectories" Member="WADDirectories">
+    <Type Name="WADDirectory">
+      <Column Name="PartitionKey" Type="System.String" DbType="VarChar(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RowKey" Type="System.String" DbType="VarChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventTickCount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DeploymentId" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleInstance" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="AbsolutePath" Type="System.String" DbType="VarChar(260) NOT NULL" CanBeNull="false" />
+      <Column Name="RelativePath" Type="System.String" DbType="VarChar(260) NOT NULL" CanBeNull="false" />
+      <Column Name="Container" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="RootDirectory" Type="System.String" DbType="VarChar(260) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WADIISLogs" Member="WADIISLogs">
+    <Type Name="WADIISLog">
+      <Column Name="PartitionKey" Type="System.String" DbType="VarChar(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RowKey" Type="System.String" DbType="VarChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventTickCount" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DeploymentId" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleInstance" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="IPAddress" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="ServiceName" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="ServerName" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="ServerIPAddress" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="ServerPort" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Method" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="URIStem" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="URIQuery" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="ProtocolStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProtocolSubStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Win32Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BytesSent" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BytesReceived" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TimeTaken" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProtocolVersion" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Host" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="UserAgent" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="Cookie" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="Referrer" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WADIISFailedRequestLogs" Member="WADIISFailedRequestLogs">
+    <Type Name="WADIISFailedRequestLog">
+      <Column Name="PartitionKey" Type="System.String" DbType="VarChar(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RowKey" Type="System.String" DbType="VarChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventTickCount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DeploymentId" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleInstance" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="AppPoolId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Pid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Verb" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="RemoteUserName" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="AuthenticationType" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="StatusCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubStatusCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeTaken" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RawXml" Type="System.Xml.Linq.XElement" DbType="Xml NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>

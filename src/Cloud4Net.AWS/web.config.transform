@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<configuration>
+  <connectionStrings>
+    <add name="AWS" providerName="System.StorageModel.AWS.AWSProvider, Cloud4Net.AWS" connectionString="AWSAccessKeyID=_YOUR_ACCOUNT_;SecretAccessKey=_YOUR_KEY_"/>
+  </connectionStrings>
+</configuration>

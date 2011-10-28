@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<configuration>
+  <appSettings>
+    <add key="AccountName" value="YOURACCOUNTNAME"/>
+    <add key="AccountKey" value="YOURACCOUNTKEY"/>
+  </appSettings>
+</configuration>

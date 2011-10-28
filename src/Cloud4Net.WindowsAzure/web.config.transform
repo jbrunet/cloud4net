@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<configuration>
+  <connectionStrings>
+    <add name="Azure" providerName="System.StorageModel.WindowsAzure.AzureProvider, Cloud4Net.WindowsAzure" connectionString="AccountName=_YOUR_ACCOUNT_;AccountKey=_YOUR_KEY_;DefaultEndpointsProtocol=http"/>
+  </connectionStrings>
+</configuration>

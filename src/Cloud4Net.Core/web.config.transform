@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="system.storageModel">
+      <section name="blobs" type="System.StorageModel.Configuration.BlobStorageSection, Cloud4Net.Abstractions"/>
+    </sectionGroup>
+  </configSections>
+  <connectionStrings>
+    <add name="FileSystem" providerName="System.StorageModel.Local.FileSystemProvider, Cloud4Net.Local" connectionString=""/>
+    <add name="Caching" providerName="System.StorageModel.Caching.AspNetCacheProvider, Cloud4Net.Caching" connectionString="ChainProvider=FileSystem"/>
+  </connectionStrings>
+  <system.storageModel>
+    <blobs defaultProvider="Caching">
+    </blobs>
+  </system.storageModel>
+  <system.diagnostics>
+    <sources>
+      <source name="System.StorageModel.BlobStorage" switchValue="All"/>
+    </sources>
+  </system.diagnostics>
+</configuration>

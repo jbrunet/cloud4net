@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.625" name="AzureLogs">
+  <DataContextMoniker Name="/WADLogsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cc79076e-aca0-4aca-b333-46a45fe769a9" absoluteBounds="0.5, 0.5, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/WADLogsDataContext/WADWindowsEventLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="645bcb03-d5d8-4f09-9e18-c5939b54c44d" absoluteBounds="0.515, 0.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc83af89-8b74-41d1-bd07-8428e36912a6" absoluteBounds="2.625, 0.5, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/WADLogsDataContext/WADLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c2e43d7-eeb0-4dc3-bf57-232c26547c00" absoluteBounds="2.64, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="26684bf8-5fa4-4413-976a-9396e4c548e3" absoluteBounds="4.75, 0.5, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/WADLogsDataContext/WADDiagnosticInfrastructureLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c21e2615-14f8-4c6e-b3cd-6a0ed280b066" absoluteBounds="4.765, 0.96, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="be00cc10-04cb-49fe-a623-cbc888918a64" absoluteBounds="6.875, 0.5, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/WADLogsDataContext/WADDirectory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="599e6565-5dda-4de1-a251-fb6e006113bd" absoluteBounds="6.8900000000000006, 0.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f78f4a3-5a06-49ee-803f-4550f976b8b7" absoluteBounds="0.5, 4.375, 2, 6.0015283203125">
+      <DataClassMoniker Name="/WADLogsDataContext/WADIISLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca3379da-fd95-4481-a233-299f7dc23a71" absoluteBounds="0.51500000000000012, 4.835, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2e61db13-0521-48c3-a749-6f25bdf1f595" absoluteBounds="2.625, 4.375, 2, 4.2708154296875">
+      <DataClassMoniker Name="/WADLogsDataContext/WADIISFailedRequestLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42f19fc7-a328-4412-a31c-49e67f14d882" absoluteBounds="2.6399999999999997, 4.835, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

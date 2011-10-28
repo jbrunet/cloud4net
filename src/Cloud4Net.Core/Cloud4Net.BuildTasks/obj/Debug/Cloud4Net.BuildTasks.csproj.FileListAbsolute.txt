@@ -1,0 +1,15 @@
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\Cloud4Net.Targets
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\App.config
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\Cloud4Net.BuildTasks.dll.config
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\Cloud4Net.BuildTasks.dll
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\Cloud4Net.BuildTasks.pdb
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\Cloud4Net.Abstractions.dll
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\Cloud4Net.Local.dll
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\Cloud4Net.WindowsAzure.dll
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\Cloud4Net.Abstractions.pdb
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\Cloud4Net.Local.pdb
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\bin\Debug\Cloud4Net.WindowsAzure.pdb
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\obj\Debug\Cloud4Net.BuildTasks.csprojResolveAssemblyReference.cache
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\obj\Debug\Cloud4Net.BuildTasks.dll
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.BuildTasks\obj\Debug\Cloud4Net.BuildTasks.pdb

@@ -1,0 +1,5 @@
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.Abstractions\bin\Debug\Cloud4Net.Abstractions.dll
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.Abstractions\bin\Debug\Cloud4Net.Abstractions.pdb
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.Abstractions\obj\Debug\Cloud4Net.Abstractions.csprojResolveAssemblyReference.cache
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.Abstractions\obj\Debug\Cloud4Net.Abstractions.dll
+D:\Dev\Projects\cloud4net\git\src\Cloud4Net.Core\Cloud4Net.Abstractions\obj\Debug\Cloud4Net.Abstractions.pdb

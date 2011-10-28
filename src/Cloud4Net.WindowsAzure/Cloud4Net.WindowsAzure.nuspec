@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>Cloud4Net.WindowsAzure</id>
+    <version>1.0.11</version>
+    <title>Cloud4Net for Windows Azure(tm) Provider</title>
+    <authors>Julien Brunet</authors>
+    <owners>Julien Brunet</owners>
+    <licenseUrl>http://cloud4net.codeplex.com/license</licenseUrl>
+    <projectUrl>http://cloud4net.codeplex.com/</projectUrl>
+    <iconUrl>http://www.nuget.org/Media/Default/Packages/Cloud4Net.WindowsAzure/1.0.0/logo.jpg</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>cloud4net is a framework to abstract cloud storage implementations, like ADO.net does for databases. Management tools are also provided.</description>
+    <tags>cloud api azure amazon</tags>
+    <dependencies>
+      <dependency id="Cloud4Net.Core" version="1.0.11" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file target="lib\Net40" src="Cloud4Net.WindowsAzure\bin\Release\Cloud4Net.WindowsAzure.dll" />
+    <file target="lib\Net20" src="Cloud4Net.WindowsAzure\bin\Release35\Cloud4Net.WindowsAzure.dll" />
+    <file target="content" src="web.config.transform" />
+  </files>
+</package>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Pack">
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)</MSBuildCommunityTasksPath>
+    <NuPackNamespaces>&lt;Namespace Prefix='nuget' Uri='http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd'/&gt;</NuPackNamespaces>
+  </PropertyGroup>
+  <Import Project="MSBuild.Community.Tasks.Targets"/>
+
+  <PropertyGroup>
+    <ProductCompany>Topian System</ProductCompany>
+    <ProductName>cloud4net</ProductName>
+    <ProductCopyright>Copyright © 2009-2011 Topian System</ProductCopyright>
+    <ProductTrademark>The MIT License (MIT) - http://cloud4net.codeplex.com/license </ProductTrademark>
+    <ProjectUrl>http://cloud4net.codeplex.com/</ProjectUrl>
+    <LicenseUrl>http://cloud4net.codeplex.com/license</LicenseUrl>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProductInfo Include="..\src\ProductInfo.cs"/>
+    <SolutionFile Include="..\src\Cloud4Net35.sln">
+      <ToolsVersion>3.5</ToolsVersion>
+    </SolutionFile>
+    <SolutionFile Include="..\src\Cloud4Net.sln">
+      <ToolsVersion>4.0</ToolsVersion>
+    </SolutionFile>
+    <NuSpec Include="..\src\**\*.nuspec"/>
+    <NuPkg Include="*.nupkg"/>
+  </ItemGroup>
+
+  <Target Name="Clean">
+    <Delete Files="@(NuPkg)"/>
+    <!--
+    <MSBuild Projects="@(SolutionFile)" Properties="Configuration=Debug" Targets="Clean" />
+    <MSBuild Projects="@(SolutionFile)" Properties="Configuration=Release" Targets="Clean" />
+    -->
+  </Target>
+  <Target Name="Version">
+    <Version VersionFile="Version.txt" BuildType="Increment" RevisionType="Automatic">
+      <Output TaskParameter="Major" PropertyName="Major"/>
+      <Output TaskParameter="Minor" PropertyName="Minor"/>
+      <Output TaskParameter="Build" PropertyName="Build"/>
+      <Output TaskParameter="Revision" PropertyName="Revision"/>
+    </Version>
+  </Target>
+  <Target Name="Build" DependsOnTargets="Version">
+    <AssemblyInfo OutputFile="%(ProductInfo.Fullpath)" CodeLanguage="C#"
+      AssemblyCompany="$(ProductCompany)"
+      AssemblyProduct="$(ProductName)"
+      AssemblyCopyright="$(ProductCopyright)"
+      AssemblyTrademark="$(ProductTrademark)"
+      AssemblyCulture=""
+      AssemblyVersion="$(Major).$(Minor).$(Build).$(Revision)"
+      AssemblyFileVersion="$(Major).$(Minor).$(Build).$(Revision)"
+      />
+    <Message Text="Building Debug configuration" Importance="High"/>
+    <MSBuild Projects="@(SolutionFile)" Targets="Rebuild" Properties="Configuration=Debug" ToolsVersion="%(ToolsVersion)" BuildInParallel="true" />
+    <Message Text="Building Release configuration" Importance="High"/>
+    <MSBuild Projects="@(SolutionFile)" Targets="Rebuild" Properties="Configuration=Release" ToolsVersion="%(ToolsVersion)" BuildInParallel="true" />
+    <ItemGroup>
+      <ObjDir Include="..\src\**\obj"/>
+    </ItemGroup>
+    <RemoveDir Directories="@(ObjDir)" />
+  </Target>
+
+  <Target Name="Pack" DependsOnTargets="Clean;Build;Version">
+    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:licenseUrl" Value="$(LicenseUrl)" Namespaces="$(NuPackNamespaces)"/>
+    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:projectUrl" Value="$(ProjectUrl)" Namespaces="$(NuPackNamespaces)"/>
+
+    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:version" Value="$(Major).$(Minor).$(Build)" Namespaces="$(NuPackNamespaces)"/>
+    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:dependencies/nuget:dependency[@id='Cloud4Net.Core']/@version" Value="$(Major).$(Minor).$(Build)" Namespaces="$(NuPackNamespaces)"/>
+    <Exec Command="nuget.exe pack %(NuSpec.FullPath)"/>
+  </Target>
+
+  <Target Name="Push" DependsOnTargets="Pack">
+    <ItemGroup>
+      <NuPack Include="*.nupkg"/>
+    </ItemGroup>
+    <ReadLinesFromFile File="nupack.apikey">
+      <Output TaskParameter="Lines" ItemName="NuPackAPIKey" />
+    </ReadLinesFromFile>
+    <PropertyGroup>
+      <NuPackAPIKey>@(NuPackAPIKey)</NuPackAPIKey>
+      <NuPackGalleryUrl>http://packages.nuget.org/v1/</NuPackGalleryUrl>
+    </PropertyGroup>
+    <Exec Command="nuget.exe push -src $(NuPackGalleryUrl) %(NuPack.FullPath) $(NuPackAPIKey)"/>
+  </Target>
+</Project>
