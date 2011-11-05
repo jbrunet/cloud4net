@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Pack">
   <PropertyGroup>
     <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)</MSBuildCommunityTasksPath>
-    <NuPackNamespaces>&lt;Namespace Prefix='nuget' Uri='http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd'/&gt;</NuPackNamespaces>
+    <NuGetNamespaces>&lt;Namespace Prefix='nuget' Uri='http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd'/&gt;</NuGetNamespaces>
   </PropertyGroup>
   <Import Project="MSBuild.Community.Tasks.Targets"/>
 
@@ -63,25 +63,25 @@
   </Target>
 
   <Target Name="Pack" DependsOnTargets="Clean;Build;Version">
-    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:licenseUrl" Value="$(LicenseUrl)" Namespaces="$(NuPackNamespaces)"/>
-    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:projectUrl" Value="$(ProjectUrl)" Namespaces="$(NuPackNamespaces)"/>
+    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:licenseUrl" Value="$(LicenseUrl)" Namespaces="$(NuGetNamespaces)"/>
+    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:projectUrl" Value="$(ProjectUrl)" Namespaces="$(NuGetNamespaces)"/>
 
-    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:version" Value="$(Major).$(Minor).$(Build)" Namespaces="$(NuPackNamespaces)"/>
-    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:dependencies/nuget:dependency[@id='Cloud4Net.Core']/@version" Value="$(Major).$(Minor).$(Build)" Namespaces="$(NuPackNamespaces)"/>
+    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:version" Value="$(Major).$(Minor).$(Build)" Namespaces="$(NuGetNamespaces)"/>
+    <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:dependencies/nuget:dependency[@id='Cloud4Net.Core']/@version" Value="$(Major).$(Minor).$(Build)" Namespaces="$(NuGetNamespaces)"/>
     <Exec Command="nuget.exe pack %(NuSpec.FullPath)"/>
   </Target>
 
   <Target Name="Push" DependsOnTargets="Pack">
     <ItemGroup>
-      <NuPack Include="*.nupkg"/>
+      <NuGet Include="*.nupkg"/>
     </ItemGroup>
-    <ReadLinesFromFile File="nupack.apikey">
-      <Output TaskParameter="Lines" ItemName="NuPackAPIKey" />
+    <ReadLinesFromFile File="NuGet.APIKey.txt">
+      <Output TaskParameter="Lines" ItemName="NuGetAPIKey" />
     </ReadLinesFromFile>
     <PropertyGroup>
-      <NuPackAPIKey>@(NuPackAPIKey)</NuPackAPIKey>
-      <NuPackGalleryUrl>http://packages.nuget.org/v1/</NuPackGalleryUrl>
+      <NuGetAPIKey>@(NuGetAPIKey)</NuGetAPIKey>
+      <NuGetGalleryUrl>http://packages.nuget.org/v1/</NuGetGalleryUrl>
     </PropertyGroup>
-    <Exec Command="nuget.exe push -src $(NuPackGalleryUrl) %(NuPack.FullPath) $(NuPackAPIKey)"/>
+    <Exec Command="nuget.exe push -source $(NuGetGalleryUrl) %(NuGet.FullPath) $(NuGetAPIKey)"/>
   </Target>
 </Project>

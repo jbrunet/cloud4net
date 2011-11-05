@@ -1,0 +1,6 @@
+*.nupkg
+*.csproj.user
+*.suo
+*.sln.cache
+bin
+obj
