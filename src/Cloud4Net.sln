@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 11
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cloud4Net.Core", "Cloud4Net.Core", "{7810F1D5-14FF-4C04-A17E-FB391D96A3A5}"
 	ProjectSection(SolutionItems) = preProject
 		Cloud4Net.Core\Cloud4Net.Core.nuspec = Cloud4Net.Core\Cloud4Net.Core.nuspec
