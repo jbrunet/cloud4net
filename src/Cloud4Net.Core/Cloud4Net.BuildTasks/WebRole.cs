@@ -7,14 +7,14 @@ using Microsoft.WindowsAzure.ServiceRuntime;
 using System.Diagnostics;
 using System.Threading;
 
-namespace $rootnamespace$
+namespace System.StorageModel.Build
 {
     public class WebRole : RoleEntryPoint
     {
         public override void Run()
         {
             // This is a sample webrole implementation. Replace with your logic.
-            Trace.WriteLine("$rootnamespace$ entry point called", "Information");
+            Trace.WriteLine("System.StorageModel.Build entry point called", "Information");
 
             while (true)
             {
