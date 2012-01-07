@@ -68,7 +68,7 @@
 
     <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:version" Value="$(Major).$(Minor).$(Build)" Namespaces="$(NuGetNamespaces)"/>
     <XmlPoke XmlInputPath="%(NuSpec.Fullpath)" Query="package/nuget:metadata/nuget:dependencies/nuget:dependency[@id='Cloud4Net.Core']/@version" Value="$(Major).$(Minor).$(Build)" Namespaces="$(NuGetNamespaces)"/>
-    <Exec Command="nuget.exe pack %(NuSpec.FullPath)"/>
+    <Exec Command="..\src\.nuget\nuget.exe pack %(NuSpec.FullPath)"/>
   </Target>
 
   <Target Name="Push" DependsOnTargets="Pack">
@@ -82,6 +82,6 @@
       <NuGetAPIKey>@(NuGetAPIKey)</NuGetAPIKey>
       <NuGetGalleryUrl>http://packages.nuget.org/v1/</NuGetGalleryUrl>
     </PropertyGroup>
-    <Exec Command="nuget.exe push -source $(NuGetGalleryUrl) %(NuGet.FullPath) $(NuGetAPIKey)"/>
+    <Exec Command="..\src\.nuget\nuget.exe push -source $(NuGetGalleryUrl) %(NuGet.FullPath) $(NuGetAPIKey)"/>
   </Target>
 </Project>

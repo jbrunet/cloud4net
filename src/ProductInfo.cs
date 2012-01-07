@@ -17,7 +17,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("cloud4net")]
 [assembly: AssemblyCopyright("Copyright © 2009-2011 Topian System")]
 [assembly: AssemblyTrademark("The MIT License (MIT) - http://cloud4net.codeplex.com/license ")]
-[assembly: AssemblyVersion("1.0.12.43352")]
-[assembly: AssemblyFileVersion("1.0.12.43352")]
+[assembly: AssemblyVersion("1.0.13.47117")]
+[assembly: AssemblyFileVersion("1.0.13.47117")]
 
 
