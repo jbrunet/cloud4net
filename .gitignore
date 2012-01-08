@@ -4,3 +4,6 @@
 *.sln.cache
 bin
 obj
+
+/src/TestResults
+/src/packages/*
